@@ -13,14 +13,14 @@
     /* Fonts */
     --ff-dm-sans: "DM Sans", sans-serif;
     
-    --fs-16: calc(16 / 16 * 1rem);
     --fs-18: calc(18 / 16 * 1rem);
     --fs-24: calc(24 / 16 * 1rem);
-    --fs-32: calc(32 / 16 * 1rem);
-    --fs-36: calc(36 / 16 * 1rem);
+    --fs-28: calc(28 / 16 * 1rem);
+    --fs-30: calc(30 / 16 * 1rem);
+    --fs-34: calc(34 / 16 * 1rem);
     
     --font-size-main: var(--fs-18);
-    --font-size-h1: var(--fs-36);
+    --font-size-h1: var(--fs-28);
     
     --fw-regular: 400;
     --fw-bold: 700;
@@ -63,4 +63,110 @@ h1 {
     font-size: var(--font-size-h1);
     font-weight: var(--fw-bold);
     line-height: 1.1;
+}
+
+/* Components */
+.expense-card {
+    width: calc(100% - 16px);
+    margin-inline: auto;
+}
+
+.my-balance {
+    background-color: var(--c-soft-red);
+    color: var(--c-very-pale-orange);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    margin-block-end: 1rem;
+    
+    & .balance {
+        font-size: var(--fs-28);
+        font-weight: var(--fw-bold);
+    }
+}
+
+.expense-chart {
+    background-color: var(--c-very-pale-orange);
+    border-radius: 1rem;
+    padding: 2.5rem 1.5rem;
+    
+    & .summary {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+    }
+    
+    & .price {
+        color: var(--c-dark-brown);
+        font-size: var(--fs-34);
+        font-weight: var(--fw-bold);
+    }
+    
+    & .rate {
+        color: var(--c-dark-brown);
+        font-weight: var(--fw-bold);
+    }
+}
+
+.bars {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    gap: 1rem;
+    padding-block: 4rem 1.5rem;
+}
+
+.bar {
+    background-color: var(--c-soft-red);
+    border-radius: 3px;
+    align-self: center;
+    width: 32px;
+}
+
+.bar-wrapper {
+    position: relative;
+}
+
+/* use for JavaScript*/
+.bill {
+    position: absolute;
+    display: none;
+    top: -35px;
+    left: -7px;
+    background-color: var(--c-dark-brown);
+    color: var(--c-very-pale-orange);
+    border-radius: 3px;
+    width: 50px;
+    height: 30px;
+}
+
+.mon {
+    height: 50px;
+}
+
+.tue {
+    height: 90px;
+}
+
+.wed {
+    background-color: var(--c-cyan);
+    height: 130px;
+}
+
+.thu {
+    height: 80px;
+}
+
+.fri {
+    height: 60px;
+}
+
+.sat {
+    height: 100px;
+}
+
+.sun {
+    height: 70px;
 }
