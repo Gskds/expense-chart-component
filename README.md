@@ -76,10 +76,19 @@ To see how you can add code snippets, see below:
   color: papayawhip;
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+```javascript
+  function calculateTotal(expenses) {
+      let total = 0;
+      for(const expense of expenses ){
+            total += expense.amount ;
+      }
+      return total
+  }
+    
+  //is equivalent with
+  function calculateTotal(expenses) {
+      return expenses.reduce((total,   expense) => total + expense.amount, 0);
+  }
 ```
 
 If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.

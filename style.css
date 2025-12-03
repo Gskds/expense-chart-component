@@ -123,6 +123,7 @@ h1 {
     border-radius: 3px;
     align-self: center;
     width: 32px;
+    transition: height 1000ms ease-out;
 }
 
 .bar-wrapper {
