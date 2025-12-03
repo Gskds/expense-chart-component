@@ -53,10 +53,10 @@ function updateExpenseBag(expense) {
     console.log(barWrappers)
     
     if (day) {
-        const bill = document.querySelector('.bill');
-        bill.textContent = expense.amount;
-        bill.style.display = "block";
-        //   console.log(bill)
+        const barValue = document.querySelector('.bar-value');
+        barValue.textContent = expense.amount;
+        barValue.style.display = "block";
+        //   console.log(bar-value)
     }
 }
 loadExpenseData();

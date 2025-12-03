@@ -20,7 +20,7 @@
     --fs-34: calc(34 / 16 * 1rem);
     
     --font-size-main: var(--fs-18);
-    --font-size-h1: var(--fs-28);
+    --font-size-h2: var(--fs-28);
     
     --fw-regular: 400;
     --fw-bold: 700;
@@ -52,17 +52,22 @@ body {
     font-family: var(--ff-dm-sans);
     font-size: var(--font-size-main);
     font-weight: var(--fw-regular);
+    
     display: grid;
     place-items: center;
     min-height: 100vh;
     line-height: 1.5;
 }
 
-h1 {
-    color: var(--c-dark-brown);
-    font-size: var(--font-size-h1);
-    font-weight: var(--fw-bold);
+h1,
+h2 {
     line-height: 1.1;
+}
+
+h2 {
+    color: var(--c-dark-brown);
+    font-size: var(--font-size-h2);
+    font-weight: var(--fw-bold);
 }
 
 /* Components */
@@ -71,7 +76,7 @@ h1 {
     margin-inline: auto;
 }
 
-.my-balance {
+.header {
     background-color: var(--c-soft-red);
     color: var(--c-very-pale-orange);
     border-radius: 8px;
@@ -81,41 +86,49 @@ h1 {
     padding: 1.5rem;
     margin-block-end: 1rem;
     
-    & .balance {
+    & .balance-amount {
         font-size: var(--fs-28);
         font-weight: var(--fw-bold);
     }
 }
 
-.expense-chart {
+.spending-section {
     background-color: var(--c-very-pale-orange);
     border-radius: 1rem;
     padding: 2.5rem 1.5rem;
     
-    & .summary {
+    & .total-month {
         display: flex;
         align-items: end;
         justify-content: space-between;
     }
     
-    & .price {
+    & .this-month-amount {
         color: var(--c-dark-brown);
         font-size: var(--fs-34);
         font-weight: var(--fw-bold);
     }
     
-    & .rate {
+    & .last-month-percent {
         color: var(--c-dark-brown);
         font-weight: var(--fw-bold);
     }
 }
 
-.bars {
+.chart-container {
+    border-bottom: 2px solid var(--c-cream);
     display: flex;
     align-items: end;
     justify-content: center;
     gap: 1rem;
     padding-block: 4rem 1.5rem;
+}
+
+.day-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
 
 .bar {
@@ -126,16 +139,11 @@ h1 {
     transition: height 1000ms ease-out;
 }
 
-.bar-wrapper {
-    position: relative;
-}
-
 /* use for JavaScript*/
-.bill {
+.bar-value {
     position: absolute;
-    display: none;
+    /* display: none; */
     top: -35px;
-    left: -7px;
     background-color: var(--c-dark-brown);
     color: var(--c-very-pale-orange);
     border-radius: 3px;
@@ -143,6 +151,7 @@ h1 {
     height: 30px;
 }
 
+/* Bar heights */
 .mon {
     height: 50px;
 }

@@ -16,62 +16,69 @@
   <main>
     <article class="expense-card">
       
-      <div class="my-balance">
+      <div class="header">
         <div>
-          <p>My balance</p>
-          <p class="balance">$921.48</p>
+          <h1>My balance</h1>
+          <p class="balance-amount">$921.48</p>
         </div>
         <img src="/images/logo.svg" alt="">
       </div>
       
-      <div class="expense-chart">
-        <h1>Spending - Last 7 days</h1>
-        <div class="bars">
-          <div class="bar-wrapper">
+      <div class="spending-section">
+        <h2>Spending - Last 7 days</h2>
+        <div class="chart-container">
+          
+          <div class="day-column">
+            <div class="bar-value"></div>
             <div class="bar mon"></div>
-            <p>mon</p>
-            <div class="bill"></div>
-            
+            <p class="bar-lable">mon</p>
           </div>
-          <div class="bar-wrapper">
+          
+          <div class="day-column">
+            <div class="bar-value"></div>
             <div class="bar tue"></div>
-            <p>tue</p>
-            <div class="bill"></div>
+            <p class="bar-lable">tue</p>
           </div>
-          <div class="bar-wrapper">
+          
+          <div class="day-column">
+            <div class="bar-value"></div>
             <div class="bar wed"></div>
-            <p>wed</p>
-            <div class="bill"></div>
+            <p class="bar-lable">wed</p>
           </div>
-          <div class="bar-wrapper">
+          
+          <div class="day-column">
+            <div class="bar-value"></div>
             <div class="bar thu"></div>
-            <p>thu</p>
-            <div class="bill"></div>
+            <p class="bar-lable">thu</p>
           </div>
-          <div class="bar-wrapper">
+          
+          <div class="day-column">
+            <div class="bar-value"></div>
             <div class="bar fri"></div>
-            <p>fri</p>
-            <div class="bill"></div>
+            <p class="bar-lable">fri</p>
           </div>
-          <div class="bar-wrapper">
+          
+          <div class="day-column">
+            <div class="bar-value"></div>
             <div class="bar sat"></div>
-            <p>sat</p>
-            <div class="bill"></div>
+            <p class="bar-lable">sat</p>
           </div>
-          <div class="bar-wrapper">
+          
+          <div class="day-column">
+            <div class="bar-value"></div>
             <div class="bar sun"></div>
-            <p>sun</p>
-            <div class="bill"></div>
+            <p class="bar-lable">sun</p>
           </div>
+          
         </div>
-        <div class="summary">
-          <div>
+        <div class="total-month">
+          <div class="this-month">
             <p>Total this month</p>
-            <p class="price">$478.33</p>
+            <p class="this-month-amount">$478.33</p>
           </div>
-          <div>
-            <p class="rate">+2.4%</p>
-            <p>from last month</p>
+          <div class="last-month">
+            <p class="last-month-percent">+2.4%</p>
+            <p class="last-month-lable">from last month</p>
           </div>
         </div>
       </div>
