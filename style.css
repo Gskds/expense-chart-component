@@ -72,8 +72,10 @@ h2 {
 
 /* Components */
 .expense-card {
-    width: calc(100% - 16px);
-    margin-inline: auto;
+    /* width: calc(100% - 16px); */
+    width: 100%;
+    max-width: 360px;
+    /* margin-inline: auto; */
 }
 
 .header {
@@ -119,40 +121,42 @@ h2 {
     border-bottom: 2px solid var(--c-cream);
     display: flex;
     align-items: end;
-    justify-content: center;
-    gap: 1rem;
-    padding-block: 4rem 1rem;
+    justify-content: space-between;
+    padding: 1rem 0.5rem;
 }
 
 .day-column {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
+    width: 12%;
 }
 
 .bar {
     background-color: var(--c-soft-red);
     border-radius: 3px;
-    align-self: center;
-    width: 32px;
-    transition: height 1000ms ease-out;
+    width: 80%;
+    transition: all 0.2s;
 }
 
-/* use for JavaScript*/
+.bar:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
 .bar-value {
-    position: absolute;
-    top: -35px;
+    position: relative;
+    top: -5px;
     background-color: var(--c-dark-brown);
     color: var(--c-very-pale-orange);
+    font-size: 14px;
     border-radius: 3px;
-    width: 50px;
-    height: 30px;
+    padding: 6px 4px;
     opacity: 0;
     transition: opacity 300ms ease-out;
 }
 
-.bar-value:hover {
+.day-column:hover .bar-value {
     opacity: 1;
 }
 
