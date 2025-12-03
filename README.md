@@ -89,6 +89,25 @@ To see how you can add code snippets, see below:
   function calculateTotal(expenses) {
       return expenses.reduce((total,   expense) => total + expense.amount, 0);
   }
+  
+  // This fun only update the first bar and set the value darValue to sun amount i.e 25.48.
+  function updateBarValue(expense) {
+    const day = expense.day;
+    const dayColumn = document.querySelector(`[data-day="${day}"]`);
+    
+    if(dayColumn) {
+        const barValue = document.querySelector('.bar-value');
+        if (barValue) {
+            barValue.textContent = `$${expense.amount}`;
+        }
+    }
+}
+
+//this happens because of line 99 
+//i.e `const barValue = document.querySelector('.bar-value');`
+// we searching the barValue form the document not form the dayColumn thats why the value barValue set to 25.48
+// so the right statement look like this
+// const barValue = dayColumn.querySelector('.bar-value');
 ```
 
 If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.

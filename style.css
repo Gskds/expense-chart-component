@@ -121,7 +121,7 @@ h2 {
     align-items: end;
     justify-content: center;
     gap: 1rem;
-    padding-block: 4rem 1.5rem;
+    padding-block: 4rem 1rem;
 }
 
 .day-column {
@@ -142,13 +142,18 @@ h2 {
 /* use for JavaScript*/
 .bar-value {
     position: absolute;
-    /* display: none; */
     top: -35px;
     background-color: var(--c-dark-brown);
     color: var(--c-very-pale-orange);
     border-radius: 3px;
     width: 50px;
     height: 30px;
+    opacity: 0;
+    transition: opacity 300ms ease-out;
+}
+
+.bar-value:hover {
+    opacity: 1;
 }
 
 /* Bar heights */
