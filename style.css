@@ -136,6 +136,7 @@ h2 {
     background-color: var(--c-soft-red);
     border-radius: 3px;
     width: 80%;
+    height: 0;
     transition: all 0.2s;
 }
 

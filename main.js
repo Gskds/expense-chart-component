@@ -6,9 +6,9 @@ async function loadExpenseData() {
             throw new Error('Fail to load data');
         }
         
-        const dayColumns = document.querySelectorAll('.day-column')
-        
         const expenses = await response.json();
+        
+        const dayColumns = document.querySelectorAll('.day-column');
         
         expenses.forEach(expense => {updateBarValue(expense);})
         
@@ -29,6 +29,7 @@ function updateBarValue(expense) {
         if (barValue) {
             barValue.textContent = `$${expense.amount}`;
         }
+        
     }
 }
 
