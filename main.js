@@ -22,6 +22,13 @@ async function loadExpenseData() {
 function updateBarValue(expense) {
     const day = expense.day;
     const dayColumn = document.querySelector(`[data-day="${day}"]`);
+    const bar = dayColumn.querySelector(`.bar.${day}`);
+    if(bar) {
+       const barHeight = (expense.amount/52) * 140;
+       
+       bar.style.height = `${barHeight}px`
+    }
+    
     
     if (dayColumn) {
         const barValue = dayColumn.querySelector('.bar-value');
