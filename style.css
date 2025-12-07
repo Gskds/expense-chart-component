@@ -72,10 +72,8 @@ h2 {
 
 /* Components */
 .expense-card {
-    /* width: calc(100% - 16px); */
-    width: 100%;
-    max-width: 360px;
-    /* margin-inline: auto; */
+    width: calc(100% - 16px);
+    margin-inline: auto;
 }
 
 .header {
